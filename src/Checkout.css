@@ -4,7 +4,7 @@
 }
 .checkout {
   display: flex;
-  padding: 18px;
+  padding: 14px 18px;
   background-color: white;
   min-height: 600px;
 }
@@ -12,4 +12,9 @@
   margin-right: 10px;
   padding: 10px;
   border-bottom: 1px solid lightgray;
+}
+.checkout_right img {
+  height: 50px;
+  width: 300px;
+  object-fit: contain;
 }

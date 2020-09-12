@@ -1,6 +1,28 @@
 import React from "react";
 import "./product.css";
-function Product({ title, image, price, rating }) {
+import One from "./ratings/One";
+import Two from "./ratings/Two";
+import Three from "./ratings/Three";
+import Four from "./ratings/Four";
+import Five from "./ratings/Five";
+import { useStateValue } from "./StateProvider";
+function Product({ id, title, image, price, rating }) {
+  const [{ cart }, dispatch] = useStateValue();
+
+  const addToCart = () => {
+    //send item to the data layer
+    dispatch({
+      type: "ADD_TO_CART",
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
+
   return (
     <div className="product">
       <div className="product_info">
@@ -10,16 +32,15 @@ function Product({ title, image, price, rating }) {
           <strong>{price}</strong>
         </p>
         <div className="product_rating">
-          {Array(rating)
-            .fill()
-            .map((_, i) => (
-              <span class="fa fa-star checked"></span>
-            ))}
-          {/* <span class="fa fa-star"></span> */}
+          {rating === 1 && <One />}
+          {rating === 2 && <Two />}
+          {rating === 3 && <Three />}
+          {rating === 4 && <Four />}
+          {rating === 5 && <Five />}
         </div>
         <img src={image} alt="" />
         <div className="btn">
-          <button>Add to Cart</button>
+          <button onClick={addToCart}>Add to Cart</button>
         </div>
       </div>
     </div>

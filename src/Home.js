@@ -13,13 +13,15 @@ function Home() {
         />
         <div className="home_row">
           <Product
+            id="123456"
             title="The Subtle Art of Not Giving a F*ck"
             price={500}
             image="https://images-na.ssl-images-amazon.com/images/I/511vJPN7p5L._SX331_BO1,204,203,200_.jpg"
             rating={3}
           />
           <Product
-            title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
+            id="122226"
+            title="Kenwood kMix Stand Mixer , 5 Litre Glass Bowl"
             price={15000}
             rating={4}
             image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
@@ -41,6 +43,7 @@ function Home() {
             image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
           />
           <Product
+            id="1232613"
             title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
             price={72486}
             rating={4}
@@ -49,9 +52,10 @@ function Home() {
         </div>
         <div className="home_row">
           <Product
+            id="1334332"
             title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"
             price={82123.5}
-            rating={4}
+            rating={2}
             image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
           />
         </div>
